@@ -62,7 +62,7 @@ class WP_Ads_Code_Widget extends WP_Widget {
 
         parent::__construct(
             $this->slug,
-            __( 'Ads Code', $this->slug ),
+            __( 'Ad Code', $this->slug ),
             array(
                 'classname'  => $this->slug,
                 'description' => __( 'A widget for displaying ads with code.', $this->slug )
@@ -91,11 +91,13 @@ class WP_Ads_Code_Widget extends WP_Widget {
             (array)$instance,
             array(
                 'title' => '',
+                'visibility' => 'both',
                 'code'   => ''
             )
         );
 
         $title = stripslashes( strip_tags( $instance[ 'title' ] ) );
+        $visibility = stripslashes( strip_tags( $instance[ 'visibility' ] ) );
         $code = stripslashes( $instance[ 'code' ] );
 
         $view_path = $this->file_util->get_absolute_path( __DIR__, '../../admin/views/wp-ads-code.php' );
@@ -116,6 +118,7 @@ class WP_Ads_Code_Widget extends WP_Widget {
         $instance = $old_instance;
 
         $instance[ 'title' ] = strip_tags( stripslashes( $new_instance[ 'title' ] ) );
+        $instance[ 'visibility' ] = strip_tags( stripslashes( $new_instance[ 'visibility' ] ) );
         $instance[ 'code' ] =  stripslashes( $instance[ 'code' ] );
 
         return $instance;
@@ -166,6 +169,7 @@ class WP_Ads_Code_Widget extends WP_Widget {
 
         $view_path = $this->file_util->get_absolute_path( __DIR__, '../../views/wp-ads-code.php' );
 
+        $visibility = stripslashes( strip_tags( $instance[ 'visibility' ] ) );
         $code = stripslashes( $instance[ 'code' ] );
 
         extract( $args, EXTR_SKIP );
@@ -206,7 +210,7 @@ class WP_Ads_Code_Widget extends WP_Widget {
      */
     public function register_admin_styles() {
 
-        $path = $this->file_util->get_absolute_path( __DIR__, '../../admin/css/wp-ads-code.css' );
+        $path = $this->file_util->get_absolute_path( __DIR__, '../../admin/css/wp-ads-code.min.css' );
         $url = $this->url_util->convert_path_to_url( $path );
 
         wp_enqueue_style( $this->slug . '-admin-styles', $url, null, $this->version );
