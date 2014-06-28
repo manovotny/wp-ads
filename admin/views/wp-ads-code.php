@@ -1,0 +1,12 @@
+<fieldset class="wp-ads-code-widget fields">
+    <ul class="items">
+        <li class="item">
+            <label class="label" for="<?php esc_attr_e( $this->get_field_id( 'title' ) ); ?>">Title</label>
+            <input id="<?php esc_attr_e( $this->get_field_id( 'title' ) ); ?>" class="control" name="<?php esc_attr_e( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo $title; ?>" />
+        </li>
+        <li class="item">
+            <label class="label" for="<?php esc_attr_e( $this->get_field_id( 'code' ) ); ?>">Code</label>
+            <textarea id="<?php esc_attr_e( $this->get_field_id( 'code' ) ); ?>" class="control" rows="10" name="<?php esc_attr_e( $this->get_field_name( 'code' ) ); ?>"><?php echo $code; ?></textarea>
+        </li>
+    </ul>
+</fieldset>
