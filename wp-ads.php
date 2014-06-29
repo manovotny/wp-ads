@@ -1,6 +1,6 @@
 <?php
 /**
- * TODO
+ * Ads for WordPress.
  *
  * @package WP_Ads
  * @author Michael Novotny <manovotny@gmail.com>
@@ -11,7 +11,7 @@
  * @wordpress-plugin
  * Plugin Name: WP Ads
  * Plugin URI: https://github.com/manovotny/wp-ads
- * Description: TODO
+ * Description: Ads for WordPress.
  * Version: 0.0.0
  * Author: Michael Novotny
  * Author URI: http://manovotny.com

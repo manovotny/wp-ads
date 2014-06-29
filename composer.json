@@ -1,7 +1,7 @@
 {
   "name": "manovotny/wp-ads",
   "version": "0.0.0",
-  "description": "TODO",
+  "description": "Ads for WordPress.",
   "type": "library",
   "homepage": "https://github.com/manovotny/wp-ads/",
   "license": "GPL-3.0+",

@@ -1,7 +1,7 @@
 {
   "name": "wp-ads",
   "version": "0.0.0",
-  "description": "TODO",
+  "description": "Ads for WordPress.",
   "repository": {
     "type": "git",
     "url": "git://github.com/manovotny/wp-ads.git"

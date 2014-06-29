@@ -1,7 +1,7 @@
 {
   "name": "wp-ads",
   "version": "0.0.0",
-  "description": "TODO",
+  "description": "Ads for WordPress.",
   "author": "Michael Novotny <http://manovotny.com/>",
   "repository": {
     "type": "git",

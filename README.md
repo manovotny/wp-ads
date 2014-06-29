@@ -1,4 +1,4 @@
 wp-ads
 ==========
 
-TODO
+Ads for WordPress.
