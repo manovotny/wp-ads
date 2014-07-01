@@ -5,7 +5,7 @@ module.exports = function (grunt) {
     grunt.config('scsslint', {
         sass: {
             options: {
-                config: '.scss-lint.yml'
+                config: 'config/.scss-lint.yml'
             },
             src: [
                 'admin/sass/**/*.scss'

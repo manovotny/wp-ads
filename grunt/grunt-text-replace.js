@@ -2,6 +2,8 @@ module.exports = function (grunt) {
 
     'use strict';
 
+    var config = require('config');
+
     grunt.config('replace', {
         phpDoc: {
             src: [
@@ -9,8 +11,8 @@ module.exports = function (grunt) {
             ],
             overwrite: true,
             replacements: [{
-                from: 'Version: <%= config.version.from %>',
-                to: 'Version: <%= config.version.to %>'
+                from: 'Version: ' + config.version.from,
+                to: 'Version: ' + config.version.to
             }]
         },
         json: {
@@ -21,8 +23,8 @@ module.exports = function (grunt) {
             ],
             overwrite: true,
             replacements: [{
-                from: '"version": "<%= config.version.from %>"',
-                to: '"version": "<%= config.version.to %>"'
+                from: '"version": "' + config.version.from + '"',
+                to: '"version": "' + config.version.to + '"'
             }]
         },
         plugin: {
@@ -31,8 +33,8 @@ module.exports = function (grunt) {
             ],
             overwrite: true,
             replacements: [{
-                from: '$version = \'<%= config.version.from %>\'',
-                to: '$version = \'<%= config.version.to %>\''
+                from: '$version = \'' + config.version.from + '\'',
+                to: '$version = \'' + config.version.to + '\''
             }]
         }
     });

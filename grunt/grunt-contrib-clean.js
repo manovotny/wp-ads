@@ -9,6 +9,7 @@ module.exports = function (grunt) {
         ],
         lib: [
             'composer.lock',
+            'config/.scss-lint.yml',
             'lib'
         ]
     });

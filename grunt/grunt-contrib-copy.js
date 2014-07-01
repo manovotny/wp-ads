@@ -11,7 +11,7 @@ module.exports = function (grunt) {
                     src: [
                         '.scss-lint.yml'
                     ],
-                    dest: '.'
+                    dest: 'config'
                 }
             ]
         },

@@ -1,0 +1,20 @@
+default:
+  - build
+  - watch
+
+build:
+  - lib
+  - css
+
+bump:
+  - replace
+
+css:
+  - clean:css
+  - scsslint
+  - sass
+  - cssmin
+
+lib:
+  - clean:lib
+  - copy
