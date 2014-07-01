@@ -119,7 +119,7 @@ class WP_Ads_Code_Widget extends WP_Widget {
 
         $instance[ 'title' ] = strip_tags( stripslashes( $new_instance[ 'title' ] ) );
         $instance[ 'visibility' ] = strip_tags( stripslashes( $new_instance[ 'visibility' ] ) );
-        $instance[ 'code' ] =  stripslashes( $instance[ 'code' ] );
+        $instance[ 'code' ] =  stripslashes( $new_instance[ 'code' ] );
 
         return $instance;
 
