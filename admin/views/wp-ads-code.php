@@ -1,7 +1,7 @@
 <fieldset class="wp-ads-code-widget fields">
     <ul class="items">
         <li class="item">
-            <label class="label" for="<?php esc_attr_e( $this->get_field_id( 'title' ) ); ?>">Identifier</label>
+            <label class="label" for="<?php esc_attr_e( $this->get_field_id( 'title' ) ); ?>">Description</label>
             <input id="<?php esc_attr_e( $this->get_field_id( 'title' ) ); ?>" class="control" name="<?php esc_attr_e( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo $title; ?>" />
         </li>
         <li class="item">
