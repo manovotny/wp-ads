@@ -2,13 +2,16 @@ module.exports = function (grunt) {
 
     'use strict';
 
+    var config = require('config');
+
     grunt.config('scsslint', {
         sass: {
             options: {
-                config: 'config/.scss-lint.yml'
+                config: 'bower_components/sass-lint-config/.scss-lint.yml',
+                force: true
             },
             src: [
-                'admin/sass/**/*.scss'
+                config.paths.source + '/**/*.scss'
             ]
         }
     });

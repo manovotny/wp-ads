@@ -2,26 +2,24 @@ module.exports = function (grunt) {
 
     'use strict';
 
+    var config = require('config');
+
     grunt.config('watch', {
         css: {
             files: [
-                'admin/sass/**/*.scss',
-                'sass/**/*.scss'
+                config.paths.source + '/**/*.scss'
             ],
             tasks: [
                 'css'
             ]
         },
-        dependencies: {
+        js: {
             files: [
-                'bower.json',
-                'composer.json',
-                'grunt/*.js',
-                'Gruntfile.js',
-                'package.json'
+                config.paths.source + '/**/*.js',
+                '!' + config.paths.source + '/**/' + config.files.browserify + '.*.js'
             ],
             tasks: [
-                'css'
+                'js'
             ]
         }
     });

@@ -1,20 +1,42 @@
 default:
   - build
-  - watch
+
+init:
+  - config
+  - shell:install
+  - update
+  - build
+
+config:
+  - replace
+  - rename
 
 build:
-  - lib
-  - css
-
-bump:
-  - replace
-
-css:
-  - clean:css
-  - scsslint
+  - clean
+  - lint
+  - test
   - sass
+
+generate:
+  - autoprefixer
   - cssmin
 
-lib:
-  - clean:lib
-  - copy
+update:
+  - shell:update
+  - curl
+  - build
+
+lint:
+  - jshint
+  - phplint
+  - scsslint
+
+test:
+  - phpunit
+
+release:
+  - build
+  - replace:project_version
+  - replace:update_project
+  - generate
+  - shell:release
