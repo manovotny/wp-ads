@@ -1,24 +1,24 @@
 {
-  "name": "wp-ads",
-  "version": "0.1.1",
-  "description": "Ads for WordPress.",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/manovotny/wp-ads.git"
-  },
-  "keywords": [
-    "ads",
-    "advertisements",
-    "wordpress"
-  ],
-  "authors": [
-    {
-      "name": "Michael Novotny",
-      "email": "manovotny@gmail.com",
-      "homepage": "http://manovotny.com"
+    "name": "wp-ads",
+    "version": "0.1.1",
+    "description": "Ads for WordPress.",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/manovotny/wp-ads.git"
+    },
+    "keywords": [
+        "ads",
+        "advertisements",
+        "wordpress"
+    ],
+    "authors": [
+        {
+            "name": "Michael Novotny",
+            "email": "manovotny@gmail.com",
+            "homepage": "http://manovotny.com"
+        }
+    ],
+    "dependencies": {
+        "sass-lint-config": "git://github.com/manovotny/sass-lint-config.git#0.1.0"
     }
-  ],
-  "dependencies": {
-    "sass-lint-config": "git://github.com/manovotny/sass-lint-config.git#0.1.0"
-  }
 }
