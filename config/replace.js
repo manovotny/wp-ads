@@ -16,11 +16,11 @@ module.exports = (function () {
             name: 'WP Ads',
             slug: 'wp-ads',
             url: 'https://github.com/manovotny/wp-ads',
-            version: '0.1.1'
+            version: '1.0.0'
         },
         translations: {
-            domain: 'TRANSLATIONS_DOMAIN',
-            path: 'TRANSLATIONS_PATH'
+            domain: 'wp-ads',
+            path: 'lang'
         }
     };
 
