@@ -8,16 +8,6 @@ class WP_Ads_Code_Widget extends WP_Widget {
     /* Properties
     ---------------------------------------------------------------------------------- */
 
-    /* File Util
-    ---------------------------------------------- */
-
-    /**
-     * Instance of the WP File Util class.
-     *
-     * @var WP_File_Util
-     */
-    private $file_util;
-
     /* Slug
     ---------------------------------------------- */
 
@@ -56,7 +46,6 @@ class WP_Ads_Code_Widget extends WP_Widget {
      */
     public function __construct() {
 
-        $this->file_util = WP_File_Util::get_instance();
         $this->url_util = WP_Url_Util::get_instance();
         $this->version = WP_Ads::get_instance()->get_version();
 
@@ -100,7 +89,7 @@ class WP_Ads_Code_Widget extends WP_Widget {
         $visibility = stripslashes( strip_tags( $instance[ 'visibility' ] ) );
         $code = stripslashes( $instance[ 'code' ] );
 
-        $view_path = $this->file_util->get_absolute_path( __DIR__, '../../admin/views/wp-ads-code.php' );
+        $view_path = realpath( __DIR__, '../../admin/views/wp-ads-code.php' );
 
         include $view_path;
 
@@ -167,7 +156,7 @@ class WP_Ads_Code_Widget extends WP_Widget {
         /* ============================================================ */
 
 
-        $view_path = $this->file_util->get_absolute_path( __DIR__, '../../views/wp-ads-code.php' );
+        $view_path = realpath( __DIR__, '../../views/wp-ads-code.php' );
 
         $visibility = stripslashes( strip_tags( $instance[ 'visibility' ] ) );
         $code = stripslashes( $instance[ 'code' ] );
@@ -210,10 +199,24 @@ class WP_Ads_Code_Widget extends WP_Widget {
      */
     public function register_admin_styles() {
 
-        $path = $this->file_util->get_absolute_path( __DIR__, '../../admin/css/wp-ads-code.min.css' );
-        $url = $this->url_util->convert_path_to_url( $path );
+        $wp_enqueue_util = WP_Enqueue_Util::get_instance();
 
-        wp_enqueue_style( $this->slug . '-admin-styles', $url, null, $this->version );
+        $handle = $this->slug . '-admin-styles';
+        $relative_path = __DIR__ . '../../admin/css';
+        $filename = 'wp-ads-code.min.css';
+        $filename_debug = 'wp-ads-code.css';
+        $dependencies = array();
+
+        $options = new WP_Enqueue_Options(
+            $handle,
+            $relative_path,
+            $filename,
+            $filename_debug,
+            $dependencies,
+            $this->version
+        );
+
+        $wp_enqueue_util->enqueue_styles( $options );
 
     }
 
