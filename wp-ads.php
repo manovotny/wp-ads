@@ -30,11 +30,11 @@ if ( ! defined( 'WPINC' ) ) {
 
 if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 
-    require __DIR__ . '/vendor/autoload.php';
+    require_once __DIR__ . '/vendor/autoload.php';
 
 }
 
 /* Initialization
 ---------------------------------------------------------------------------------- */
 
-add_action( 'widgets_init', create_function( '', 'register_widget( "WP_Ads_Code_Widget" );' ) );
+require_once __DIR__ . '/src/initialize.php';
