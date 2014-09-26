@@ -156,7 +156,7 @@ class WP_Ads_Code_Widget extends WP_Widget {
         /* ============================================================ */
 
 
-        $view_path = realpath( __DIR__ . '/../../views/wp-ads-code.php' );
+        $view_path = realpath( __DIR__ . '/../../site/views/wp-ads-code.php' );
 
         $visibility = stripslashes( strip_tags( $instance[ 'visibility' ] ) );
         $code = stripslashes( $instance[ 'code' ] );
