@@ -89,7 +89,7 @@ class WP_Ads_Code_Widget extends WP_Widget {
         $visibility = stripslashes( strip_tags( $instance[ 'visibility' ] ) );
         $code = stripslashes( $instance[ 'code' ] );
 
-        $view_path = realpath( __DIR__, '../../admin/views/wp-ads-code.php' );
+        $view_path = realpath( __DIR__ . '/../../admin/views/wp-ads-code.php' );
 
         include $view_path;
 
@@ -156,7 +156,7 @@ class WP_Ads_Code_Widget extends WP_Widget {
         /* ============================================================ */
 
 
-        $view_path = realpath( __DIR__, '../../views/wp-ads-code.php' );
+        $view_path = realpath( __DIR__ . '/../../views/wp-ads-code.php' );
 
         $visibility = stripslashes( strip_tags( $instance[ 'visibility' ] ) );
         $code = stripslashes( $instance[ 'code' ] );
