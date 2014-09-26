@@ -216,7 +216,7 @@ class WP_Ads_Code_Widget extends WP_Widget {
             $this->version
         );
 
-        $wp_enqueue_util->enqueue_styles( $options );
+        $wp_enqueue_util->enqueue_style( $options );
 
     }
 
