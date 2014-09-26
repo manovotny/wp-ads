@@ -16,7 +16,7 @@ module.exports = (function () {
             name: 'WP Ads',
             slug: 'wp-ads',
             url: 'https://github.com/manovotny/wp-ads',
-            version: '1.0.3'
+            version: '1.0.4'
         },
         translations: {
             domain: 'wp-ads',
