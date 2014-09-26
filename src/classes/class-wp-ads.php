@@ -43,7 +43,7 @@ class WP_Ads {
      *
      * @var string
      */
-    protected $version = '1.0.4';
+    protected $version = '1.0.5';
 
     /**
      * Getter method for version.
