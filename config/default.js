@@ -25,7 +25,7 @@ module.exports = (function () {
             slug: 'wp-ads',
             type: 'plugin', // Should be `plugin` or `theme`.
             url: 'https://github.com/manovotny/wp-ads',
-            version: '1.0.5'
+            version: '1.0.6'
         }
     };
 
