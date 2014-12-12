@@ -18,16 +18,6 @@ class WP_Ads_Code_Widget extends WP_Widget {
      */
     protected $slug = 'wp-ads-code-widget';
 
-    /* Url Util
-    ---------------------------------------------- */
-
-    /**
-     * Instance of the WP Url Util class.
-     *
-     * @var WP_Url_Util
-     */
-    private $url_util;
-
     /* Version
     ---------------------------------------------- */
 
@@ -46,7 +36,6 @@ class WP_Ads_Code_Widget extends WP_Widget {
      */
     public function __construct() {
 
-        $this->url_util = WP_Url_Util::get_instance();
         $this->version = WP_Ads::get_instance()->get_version();
 
         parent::__construct(
