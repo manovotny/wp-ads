@@ -6,7 +6,7 @@
  * Plugin Name: WP Ads
  * Plugin URI: https://github.com/manovotny/wp-ads
  * Description: Ads for WordPress.
- * Version: 1.0.6
+ * Version: 1.0.7
  * Author: Michael Novotny
  * Author URI: http://manovotny.com
  * License: GPL-3.0+
